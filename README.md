@@ -17,7 +17,7 @@ Getting Started
 * All assignments will be written in C++. The assignments should ease you in.
 
 * The assignments make use of the cross-platform, open source Qt development environment,
-which comes with a great IDE. Install the open source version
+which has a great IDE. Install the open source version
 of the Qt environment: <https://www.qt.io/download-open-source>
 (At the time of writing, version 5.11 is the newest version. Any 5.x
 version should work.) This installer, by default, includes all versions of
@@ -31,5 +31,13 @@ On Windows, also install the MingW compiler.
 * Download each assignment. Inside each folder there is a
 file named `<project>.pro`. This should launch the Qt Creator development
 environment (IDE).
+
+    * If you really don't want to use the Qt Creator IDE, you can use `qmake` to set up a standard `Makefile`. You will still need to install the Qt libraries and headers. From inside each folder, run:
+    
+            mkdir build
+            cd build
+            qmake ..
+        
+        Then, to compile the program, just type `make`.
 
 * Build and run the code. Make your changes. Write a `Notes.txt`. Hand it in.
