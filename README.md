@@ -1,43 +1,64 @@
 Computer Graphics - Homework Assignments
 ========================================
 
+These programming projects accompany an introductory computer graphics course.
+They cover 2D raster images, 3D geometry, 3D transformations, ray tracing, and the GPU-accelerated graphics pipeline. The assignments have been tested on Mac, Windows, and Linux.
+
+The courses assume familiarity with basic linear algebra, multivariable calculus, and low-level or systems programming.
+
 Homework Assignments:
 ---------------------
 
-1. [Airbrush](https://github.com/yig/graphics101-airbrush)
-2. [Raycasting](https://github.com/yig/graphics101-raycasting)
-3. [Raytracing](https://github.com/yig/graphics101-raytracing)
-4. [Image Processing](https://github.com/yig/graphics101-imageprocessing)
-5. [Meshes](https://github.com/yig/graphics101-meshes)
-6. [Shaders aka the Graphics Pipeline](https://github.com/yig/graphics101-pipeline)
+1. [Airbrush](https://github.com/yig/graphics101-airbrush): Raster images and compositing.
+2. [Raycasting](https://github.com/yig/graphics101-raycasting): Ray tracing and 3D transformations.
+3. [Raytracing](https://github.com/yig/graphics101-raytracing): Ray tracing and illumination.
+4. [Image Processing](https://github.com/yig/graphics101-imageprocessing): Image processing.
+5. [Meshes](https://github.com/yig/graphics101-meshes): Mesh processing.
+6. [Shaders aka the Graphics Pipeline](https://github.com/yig/graphics101-pipeline): The graphics pipeline and GPU shader programming.
 
 Getting Started
 ---------------
 
 * All assignments will be written in C++. The assignments should ease you in.
 
-* The assignments make use of the cross-platform, open source Qt development environment,
-which has a great IDE. Install the open source version
-of the Qt environment: <https://www.qt.io/download-open-source>
-(At the time of writing, version 5.11 is the newest version. Any 5.x
-version should work.) This installer, by default, includes all versions of
-Qt. This is unnecessary and takes a huge amount of space.
-Install only the most recent version (e.g. Qt 5.11) and the Qt Creator IDE.
-On Windows, also install the MingW compiler.
+* You will need a working C++ compiler, the [CMake](https://cmake.org/) build system, and, for the first assignment only ([Airbrush](https://github.com/yig/graphics101-airbrush)), the [Qt GUI library](https://www.qt.io/download-open-source). Qt also has a nice integrated development environment (IDE) for C++ called Qt Creator, which is quite useful. Here are my recommended installation instructions:
 
-    * Mac users can install more easily with [Homebrew](https://brew.sh/): `brew install qt` and `brew cask install qt-creator`.
-    * Ubuntu Linux users can install more easily via `apt-get install qtbase5-dev qtcreator`.
+    * Ubuntu Linux: `apt-get install build-essential cmake qtbase5-dev qtcreator`
+
+    * Mac:
+    
+        1. Install the [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) compiler and IDE.
+        2. Install the [Homebrew](https://brew.sh/) package manager.
+        3. On the command line, run: `brew install cmake qt` and, if you want the Qt IDE, `brew cask install qt-creator`.
+        * You can use the [Qt offline installers](https://www.qt.io/offline-installers) (no account needed) or the [Qt online installer](https://www.qt.io/download-open-source) instead of steps 2 and 3. Install only the latest version of Qt and, optionally, the Qt Creator IDE.
+
+    * Windows: There is a simpler way and a more complicated way:
+
+        * Simpler: Use [Qt's online installer](https://www.qt.io/download-open-source). Install the open source version of the Qt environment. This annoyingly requires you to create an account, but in exchange provides a single installer for Qt Creator, the Qt library, and, on Windows, a C++ compiler. The online installer, by default, includes all versions of Qt. This is unnecessary and takes a huge amount of space. Install only the most recent version (e.g. Qt 5.15), the Qt Creator IDE, and the MingW compiler.
+        
+        * More complicated:
+        
+            1. Install a compiler. It could be [Visual Studio](https://visualstudio.microsoft.com/) (not VSCode), which provides an entire IDE. It could be [MinGW](https://wiki.qt.io/MinGW).
+            2. Install [CMake](https://cmake.org/).
+            3. Install the Qt GUI libraries and, optionally, the Qt Creator IDE using the [Qt offline installers](https://www.qt.io/offline-installers) (no account needed) or the [Qt online installer](https://www.qt.io/download-open-source). Install only the latest version of Qt and the Qt Creator IDE.
 
 * Download each assignment. Inside each folder there is a
-file named `<project>.pro`. This should launch the Qt Creator development
-environment (IDE).
+file named `CMakeLists.txt`.
 
-    * If you really don't want to use the Qt Creator IDE, you can use `qmake` to set up a standard `Makefile`. You will still need to install the Qt libraries and headers. From inside each folder, run:
+    * You can open it directly with the Qt Creator development
+environment (IDE) if you are using that.
+
+    * If you aren't using the Qt Creator IDE, from inside each folder, run:
     
             mkdir build
             cd build
-            qmake ..
+            cmake ..
         
-        Then, to compile the program, just type `make`.
+        Then, to compile the program, just type `make`. There are some useful flags you can pass to `cmake`. Try:
+        
+        * `cmake -DCMAKE_BUILD_TYPE=Debug ..` to compile with debug information for use with a debugger.
+        * `cmake -DCMAKE_BUILD_TYPE=Release ..` to compile an optimized build. Your code will run much faster.
+        * `cmake -G Xcode ..` will generate a project for the Xcode IDE on macOS.
+        * `cmake -G "Visual Studio 16 2019" ..` will generate a project for the Visual Studio IDE on Windows.
 
 * Build and run the code. Make your changes. Write a `Notes.txt`. Hand it in.
