@@ -34,7 +34,7 @@ Getting Started
 
     * Windows: There is a simpler way and a more complicated way:
 
-        * Simpler: Use [Qt's online installer](https://www.qt.io/download-open-source). Install the open source version of the Qt environment. This annoyingly requires you to create an account, but in exchange provides a single installer for Qt Creator, the Qt library, and, on Windows, a C++ compiler. The online installer, by default, includes all versions of Qt. This is unnecessary and takes a huge amount of space. Install only the most recent version (e.g. Qt 5.15), the Qt Creator IDE, and the MingW compiler.
+        * Simpler: Use [Qt's online installer](https://www.qt.io/download-open-source). Install the open source version of the Qt environment. This annoyingly requires you to create an account, but in exchange provides a single installer for Qt Creator, the Qt library, and a C++ compiler. The online installer, by default, includes all versions of Qt. This is unnecessary and takes a huge amount of space. Install only the most recent version (e.g. Qt 5.15), the Qt Creator IDE, and the MingW compiler.
         
         * More complicated:
         
