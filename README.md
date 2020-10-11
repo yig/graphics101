@@ -54,10 +54,11 @@ environment (IDE) if you are using that.
             cd build
             cmake ..
         
-        Then, to compile the program, just type `make`. There are some useful flags you can pass to `cmake`. Try:
+        Then, to compile the program, just type `make` or `cmake --build .`. There are some useful flags you can pass to `cmake`. Try:
         
-        * `cmake -DCMAKE_BUILD_TYPE=Debug ..` to compile with debug information for use with a debugger.
-        * `cmake -DCMAKE_BUILD_TYPE=Release ..` to compile an optimized build. Your code will run much faster.
+        * `cmake -DCMAKE_BUILD_TYPE=Debug ..` to specify compilation with debug information for use with a debugger.
+        * `cmake -DCMAKE_BUILD_TYPE=Release ..` to specify compilation of an optimized build. Your code will run much faster.
+        * `cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..` to specify compilation of an optimized build with debug information. Your code will run much faster, but you will still sort of be able to debug it (compilers move code around when optimizing).
         * `cmake -G Xcode ..` will generate a project for the Xcode IDE on macOS.
         * `cmake -G "Visual Studio 16 2019" ..` will generate a project for the Visual Studio IDE on Windows.
 
