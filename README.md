@@ -36,6 +36,8 @@ Getting Started
 
         * Simpler: Use [Qt's online installer](https://www.qt.io/download-open-source). Install the open source version of the Qt environment. This annoyingly requires you to create an account, but in exchange provides a single installer for Qt Creator, the Qt library, and a C++ compiler. The online installer, by default, includes all versions of Qt. This is unnecessary and takes a huge amount of space. Install only the most recent version (e.g. Qt 5.15), the Qt Creator IDE, and the MingW compiler.
         
+        * Less simple: Install [Anaconda](https://www.anaconda.com/products/individual) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html). (Miniconda is faster to install.) Choose the 64-bit Python 3.x version. Launch the Anaconda shell from the Start menu and run: `conda install -c conda-forge cmake git qt cxx-compiler`. If you want the Qt Creator IDE, install it via the Qt Creator button on the [Qt offline installer](https://www.qt.io/offline-installers) page.
+        
         * More complicated:
         
             1. Install a compiler. It could be [Visual Studio](https://visualstudio.microsoft.com/) (not VSCode), which provides an entire IDE. It could be [MinGW](https://wiki.qt.io/MinGW).
@@ -62,4 +64,4 @@ environment (IDE) if you are using that.
         * `cmake -G Xcode ..` will generate a project for the Xcode IDE on macOS.
         * `cmake -G "Visual Studio 16 2019" ..` will generate a project for the Visual Studio IDE on Windows.
 
-* Build and run the code. Make your changes. Write a `Notes.txt`. Hand it in.
+* Build and run the code. Make your changes. Write a `Notes.txt`. Run `cpack` to generate a `.zip` file. Hand in the `.zip` file.
