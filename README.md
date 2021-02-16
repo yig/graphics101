@@ -64,4 +64,4 @@ environment (IDE) if you are using that.
         * `cmake -G Xcode ..` will generate a project for the Xcode IDE on macOS.
         * `cmake -G "Visual Studio 16 2019" ..` will generate a project for the Visual Studio IDE on Windows.
 
-* Build and run the code. Make your changes. Write a `Notes.txt`. Run `cpack` to generate a `.zip` file. Hand in the `.zip` file.
+* Build and run the code. Make your changes. Write a `Notes.txt`. Run `cpack` (or `make zip` or `cmake --build . --target zip`) to generate a `.zip` file. Hand in the `.zip` file.
