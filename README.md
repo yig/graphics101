@@ -29,7 +29,7 @@ Getting Started
     
         1. Install the [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) compiler and IDE.
         2. Install the [Homebrew](https://brew.sh/) package manager.
-        3. On the command line, run: `brew install cmake qt` and, if you want the Qt IDE, `brew cask install qt-creator`.
+        3. On the command line, run: `brew install cmake qt` and, if you want the Qt IDE, `brew install --cask qtcreator`.
         * You can use the [Qt offline installers](https://www.qt.io/offline-installers) (no account needed) or the [Qt online installer](https://www.qt.io/download-open-source) instead of steps 2 and 3. Install only the latest version of Qt and, optionally, the Qt Creator IDE.
 
     * Windows: There is a simpler way and a more complicated way:
