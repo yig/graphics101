@@ -43,7 +43,7 @@ Getting Started
 * Download each assignment. Inside each folder there is a
 file named `CMakeLists.txt`.
 
-    * You can open it directly with your IDE, if your IDE supports that. (Examples: Visual Studio, Visual Studio Code with the [CMake Tools extension](https://devblogs.microsoft.com/cppblog/cmake-tools-extension-for-visual-studio-code/), and Qt Creator.)
+    * You can open it directly with your IDE, if your IDE supports that. (Examples: [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://code.visualstudio.com/) with the [CMake Tools extension](https://devblogs.microsoft.com/cppblog/cmake-tools-extension-for-visual-studio-code/), [CLion](https://www.jetbrains.com/clion/), and Qt Creator.)
 
     * You can ask `cmake` to generate a build file for your IDE. For example:
     
