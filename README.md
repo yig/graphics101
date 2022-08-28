@@ -48,7 +48,7 @@ file named `CMakeLists.txt`.
     * You can ask `cmake` to generate a build file for your IDE. For example:
     
         * `cmake -G Xcode ..` will generate a project for the Xcode IDE on macOS.
-        * `cmake -G "Visual Studio 16 2019" ..` will generate a project for the Visual Studio 2019 IDE on Windows.
+        * `cmake -G "Visual Studio 16 2019" ..` will generate a project for the Visual Studio 2019 IDE on Windows. `cmake` should find your Visual Studio installation automatically. If it isn't, make sure you are running from a [Visual Studio Developer Command Prompt](https://docs.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell?view=vs-2022).
 
     * If you aren't using an IDE, from inside each folder, run:
     
