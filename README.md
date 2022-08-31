@@ -38,7 +38,7 @@ Getting Started
         * DIY:
         
             1. Install a compiler. It could be [Visual Studio](https://visualstudio.microsoft.com/), which provides an entire IDE. It could be [MinGW](https://wiki.qt.io/MinGW). ([Visual Studio *Code*](https://code.visualstudio.com/) is a nice editor, but doesn't come with a compiler.)
-            2. Install [CMake](https://cmake.org/).
+            2. Install [CMake](https://cmake.org/). You must install/reinstall CMake *after* you install a compiler. The CMake installer discovers available compilers.)
 
 * Download each assignment. Inside each folder there is a
 file named `CMakeLists.txt`.
@@ -48,7 +48,7 @@ file named `CMakeLists.txt`.
     * You can ask `cmake` to generate a build file for your IDE. For example:
     
         * `cmake -G Xcode ..` will generate a project for the Xcode IDE on macOS.
-        * `cmake -G "Visual Studio 16 2019" ..` will generate a project for the Visual Studio 2019 IDE on Windows. `cmake` should find your Visual Studio installation automatically. If it isn't, make sure you are running from a [Visual Studio Developer Command Prompt](https://docs.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell?view=vs-2022).
+        * `cmake -G "Visual Studio 16 2019" ..` will generate a project for the Visual Studio 2019 IDE on Windows. `cmake` should find your Visual Studio installation automatically. If it isn't, reinstall cmake (it finds compilers during installation) and make sure you are running from a [Visual Studio Developer Command Prompt](https://docs.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell?view=vs-2022).
 
     * If you aren't using an IDE, from inside each folder, run:
     
