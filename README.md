@@ -31,7 +31,9 @@ Getting Started
         2. Install the [Homebrew](https://brew.sh/) package manager.
         3. On the command line, run: `brew install cmake`.
 
-    * Windows: There are two ways that should work well:
+    * Windows: There are three ways that should work well:
+    
+        * Install [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install). Then follow the Ubuntu Linux instructions above.
 
         * [Miniconda](https://docs.conda.io/en/latest/miniconda.html): Choose the 64-bit Python 3.x version. Launch the Anaconda shell from the Start menu and run: `conda install -c conda-forge cmake git cxx-compiler`.
         
